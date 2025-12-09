@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Harshita Lohia | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="bg-gray-200 flex">
+
+  <!-- ===========================
+       LEFT NAVBAR WITH BUTTONS
+  ============================ -->
+  <aside class="w-52 fixed left-0 top-0 h-screen bg-white shadow-xl border-r-4 border-gray-300 p-6 z-20 flex flex-col items-start">
+
+    <h1 class="text-xl font-bold text-gray-900 mb-10 tracking-tight">
+      Harshita<span class="text-emerald-500">.</span>
+    </h1>
+
+    <nav class="flex flex-col gap-4 w-full">
+      <a href="#home"
+         class="w-full text-center py-2 rounded-lg border border-gray-400 
+                hover:bg-emerald-500 hover:text-white transition font-medium 
+                text-sm shadow-sm">
+        Home
+      </a>
+
+      <a href="#about"
+         class="w-full text-center py-2 rounded-lg border border-gray-400 
+                hover:bg-emerald-500 hover:text-white transition font-medium 
+                text-sm shadow-sm">
+        About
+      </a>
+
+      <a href="#experience"
+         class="w-full text-center py-2 rounded-lg border border-gray-400 
+                hover:bg-emerald-500 hover:text-white transition font-medium 
+                text-sm shadow-sm">
+        Experience & Education
+      </a>
+      <a href="#skills"
+         class="w-full text-center py-2 rounded-lg border border-gray-400 
+                hover:bg-emerald-500 hover:text-white transition font-medium 
+                text-sm shadow-sm">
+        Skills
+      </a>
+    </nav>
+  </aside>
+
+
+  <!-- ===========================
+       MAIN CONTENT (RIGHT SIDE)
+  ============================ -->
+  <main class="flex-1 ml-52">
+
+    <!-- ===========================
+         HOME SECTION
+    ============================ -->
+    <section id="home" class="min-h-screen w-full flex items-center justify-center p-6 bg-gray-200">
+      <div class="max-w-5xl w-full h-[90vh] bg-white border-4 border-gray-300 rounded-lg shadow-xl overflow-hidden flex">
+
+        <!-- LEFT: IMAGE -->
+        <div class="w-1/2 h-full border-r-4 border-gray-300">
+          <img
+            src="{{ url_for('static', filename='me.jpg') }}"
+            alt="Harshita"
+            class="w-full h-full object-cover border-b-4 border-gray-300"
+          >
+        </div>
+
+        <!-- RIGHT: TEXT -->
+        <div class="w-1/2 flex flex-col justify-center px-12 py-10">
+          <h1 class="text-4xl font-bold text-gray-900">Harshita Lohia</h1>
+          <p class="mt-3 text-lg text-gray-600">Software Engineer</p>
+
+          <a
+            href="mailto:harshitalohia@gmail.com"
+            class="mt-10 inline-block bg-gray-900 text-white px-7 py-3 rounded hover:bg-gray-700 transition text-sm text-center"
+          >
+            Reach out
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ===========================
+         ABOUT SECTION
+    ============================ -->
+    <section id="about" class="min-h-screen w-full flex items-center justify-center p-6 bg-gray-300">
+      <div class="max-w-5xl w-full h-[90vh] bg-[#c5c1bb] border-4 border-gray-400 rounded-lg shadow-xl overflow-hidden flex">
+
+        <!-- LEFT: TEXT -->
+        <div class="w-1/2 flex flex-col justify-center px-12 py-10 pr-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">About Me</h2>
+
+          <p class="text-gray-800 leading-relaxed text-sm">
+            I am a driven software engineering student passionate about building
+            real-world solutions using AI, automation, and cloud technologies.
+            I enjoy creating practical systems and intuitive user experiences,
+            and I am continually expanding my knowledge through hands-on projects.
+            <br><br>
+            My interests include machine learning, automation,
+            cloud computing, and modern full-stack development.
+          </p>
+        </div>
+
+        <!-- RIGHT: IMAGE -->
+        <div class="w-1/2 h-full flex items-center justify-center pl-4">
+          <div class="w-full border-4 border-gray-500 rounded-lg overflow-hidden">
+            <img
+              src="{{ url_for('static', filename='me.jpg') }}"
+              alt="Harshita"
+              class="w-full h-full object-cover"
+            >
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+<section id="experience" class="min-h-screen w-full flex items-center justify-center p-6 bg-gray-200">
+  <div class="max-w-5xl w-full bg-white border-4 border-gray-300 rounded-lg shadow-xl overflow-hidden flex">
+
+    <!-- LEFT TITLE -->
+    <div class="w-1/3 flex items-start justify-center px-10 py-12">
+      <h2 class="text-3xl font-bold text-gray-900 leading-tight">
+        Experience<br>& Education
+      </h2>    
+    </div>
+
+    <!-- RIGHT CONTENT (BOXES) -->
+    <div class="w-2/3 px-10 py-12 flex flex-col gap-8 text-gray-900">
+
+      <!-- EXPERIENCE -->
+      <div class="border border-gray-400 rounded-xl p-5 shadow-sm bg-gray-50">
+        <div class="flex gap-6">
+          <div class="w-20 text-xs font-semibold text-gray-600 pt-1">
+            May'25-July'25
+          </div>
+          <div class="flex-1">
+            <p class="font-semibold uppercase tracking-wide text-xs">
+              Congruent Solutions – Intern
+            </p>
+            <p class="text-[11px] text-gray-500 mb-1">Developer • Chennai</p>
+            <p class="text-[12px] leading-relaxed text-gray-700">
+              Worked on Azure ML classification pipelines, documentation, test planning,
+              and enterprise product workflows in retirement solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIT COLLEGE -->
+      <div class="border border-gray-400 rounded-xl p-5 shadow-sm bg-gray-50">
+        <div class="flex gap-6">
+          <div class="w-20 text-xs font-semibold text-gray-600 pt-1">
+            2022–2026
+          </div>
+          <div class="flex-1">
+            <p class="font-semibold uppercase tracking-wide text-xs">
+              VIT Chennai — B.Tech Software Engineering
+            </p>
+            <p class="text-[11px] text-gray-500 mb-1">CGPA: 8.73 (till 2025)</p>
+            <p class="text-[12px] leading-relaxed text-gray-700">
+              Pursuing Software Engineering with focus on problem solving and creating dynamic solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12TH -->
+      <div class="border border-gray-400 rounded-xl p-5 shadow-sm bg-gray-50">
+        <div class="flex gap-6">
+          <div class="w-20 text-xs font-semibold text-gray-600 pt-1">
+            2022
+          </div>
+          <div class="flex-1">
+            <p class="font-semibold uppercase tracking-wide text-xs">
+              Bhavan's Rajaji Vidyashram — Class 12
+            </p>
+            <p class="text-[11px] text-gray-500 mb-1">Score: 90%</p>
+            <p class="text-[12px] leading-relaxed text-gray-700">
+              Completed senior secondary education in Computer Science stream with strong academic performance.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10TH -->
+      <div class="border border-gray-400 rounded-xl p-5 shadow-sm bg-gray-50">
+        <div class="flex gap-6">
+          <div class="w-20 text-xs font-semibold text-gray-600 pt-1">
+            2020
+          </div>
+          <div class="flex-1">
+            <p class="font-semibold uppercase tracking-wide text-xs">
+              Bhavan's Rajaji Vidyashram — Class 10
+            </p>
+            <p class="text-[11px] text-gray-500 mb-1">Score: 87%</p>
+            <p class="text-[12px] leading-relaxed text-gray-700">
+              Completed secondary education with consistent academic excellence across subjects.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===========================
+         SKILLS & PROFICIENCIES SECTION
+    ============================ -->
+    <section id="skills" class="min-h-screen w-full flex items-center justify-center p-6 bg-gray-50">
+      <div class="max-w-5xl w-full bg-white border-4 border-gray-300 rounded-lg shadow-xl overflow-hidden flex">
+
+        <!-- LEFT: TITLE -->
+        <div class="w-1/3 flex items-center justify-center px-12 py-16">
+          <h2 class="text-4xl font-bold text-gray-900 leading-tight">
+            Skills &<br>Proficiencies
+          </h2>
+        </div>
+
+        <!-- RIGHT: SKILL BARS -->
+        <div class="w-2/3 px-10 py-12 flex items-center justify-center">
+          <div class="w-full grid grid-cols-2 gap-8 text-gray-900">
+
+            <div>
+              <p class="text-xs text-gray-600 mb-3">Course Work - OS,CN,DSA,OPP,AI,ML,RPA,ROS,DBMS</p>
+              <div class="w-full bg-gray-300 h-4 rounded-full relative">
+                <div class="bg-black h-4 rounded-full" style="width:75%"></div>
+                <div class="absolute right-0 top-0 h-4 w-6 bg-gray-400 rounded-r-full"></div>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-xs text-gray-600 mb-3">LANGUAGES - C,C++,JAVA,Python,R,SQL,HTML,Tailwindcss,Ardiuno</p>
+              <div class="w-full bg-gray-300 h-4 rounded-full relative">
+                <div class="bg-black h-4 rounded-full" style="width:85%"></div>
+                <div class="absolute right-0 top-0 h-4 w-6 bg-gray-400 rounded-r-full"></div>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-xs text-gray-600 mb-3">TECHNOLOGIES - Prompt Engineering,AWS,LINUX,Azure,Mysql,Git,RAG,OpenCV,</p>
+              <div class="w-full bg-gray-300 h-4 rounded-full relative">
+                <div class="bg-black h-4 rounded-full" style="width:70%"></div>
+                <div class="absolute right-0 top-0 h-4 w-6 bg-gray-400 rounded-r-full"></div>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-xs text-gray-600 mb-3">TOOLS - VSCode,Docker,Postman,Agisoft Metashape,UIPath,Github</p>
+              <div class="w-full bg-gray-300 h-4 rounded-full relative">
+                <div class="bg-black h-4 rounded-full" style="width:60%"></div>
+                <div class="absolute right-0 top-0 h-4 w-6 bg-gray-400 rounded-r-full"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
