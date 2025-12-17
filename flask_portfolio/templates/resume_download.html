@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="resume-section">
+
+  <!-- HEADER -->
+  <div class="card fade-in-up">
+    <h2 class="section-title">Resume</h2>
+    <p class="small">
+      A snapshot of my academic background, skills, and professional experience.
+    </p>
+  </div>
+
+  <!-- RESUME PREVIEW CARD -->
+  <div class="card resume-card fade-in-up" style="animation-delay:0.15s;">
+
+    <div class="resume-text">
+      <h3>Harshita Lohia</h3>
+      <p class="small">
+        Software Engineering Student | AI • Automation • Cloud
+      </p>
+
+      <ul class="resume-highlights">
+        <li>↪️ B.Tech (CSE), VIT Chennai — CGPA 8.73</li>
+        <li>↪️ Intern at Congruent Solutions (Azure ML)</li>
+        <li>↪️ Automation using UiPath</li>
+        <li>↪️ AWS & Cloud Fundamentals</li>
+        <li>↪️ Interest in AI & Explainable AI</li>
+      </ul>
+    </div>
+
+    <div class="resume-action">
+      <a href="{{ url_for('download_resume') }}" class="btn resume-btn">
+        Download Resume (PDF)
+      </a>
+      <p class="small resume-note">
+        Updated version • PDF format
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+{% endblock %}

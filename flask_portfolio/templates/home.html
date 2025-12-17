@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- FULL HERO SECTION -->
+<section id="home-hero" class="hero-section">
+
+  <!-- LEFT: IMAGE -->
+  <div class="hero-left">
+    <img src="{{ url_for('static',filename='me.jpeg') }}" alt="Harshita" class="hero-image">
+  </div>
+
+  <!-- RIGHT: TEXT -->
+  <div class="hero-right">
+    <h1 class="hero-title fade-in-up">Hi, I'm Harshita!</h1>
+
+    <p class="hero-subtitle fade-in-up" style="animation-delay:0.2s;">
+      Software Engineer • AI enthusiast • Automation 
+    </p>
+
+    <p class="hero-description fade-in-up" style="animation-delay:0.4s;">
+      I’m passionate about automation, AI, and full-stack development, and I enjoy building smart, efficient, end-to-end solutions.
+
+    <div class="hero-buttons fade-in-up" style="animation-delay:0.6s;">
+      <a href="{{ url_for('about') }}" class="btn">About Me</a>
+      <a href="{{ url_for('projects') }}" class="btn-outline">View Projects</a>
+    </div>
+  </div>
+
+</section>
+
+{% endblock %}

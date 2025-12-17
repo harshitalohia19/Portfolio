@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="projects-section">
+
+  <div class="projects-header">
+    <span class="projects-tag">Selected Work</span>
+    <h1><i class="fa-solid fa-circle-nodes"></i> Projects</h1>
+    <p>Swipe horizontally to explore my work .</p>
+  </div>
+
+  <!-- Arrow indicators -->
+  <div class="carousel-indicators">
+    <span>&lt;</span>
+    <span>Swipe</span>
+    <span>&gt;</span>
+  </div>
+
+  <div class="projects-carousel">
+
+    {% for project in projects %}
+    <div class="project-slide">
+
+      <div class="project-card">
+        <h2>{{ project.title }}</h2>
+
+        {% if project.tech_stack %}
+        <p class="project-tech"><i class="fa-solid fa-gear"> </i> {{ project.tech_stack }}</p>
+        {% endif %}
+
+        <p class="project-short">{{ project.short_description }}</p>
+
+        <div class="project-description">
+          {{ project.description }}
+        </div>
+      </div>
+
+    </div>
+    {% endfor %}
+
+  </div>
+
+</section>
+
+
+{% endblock %}

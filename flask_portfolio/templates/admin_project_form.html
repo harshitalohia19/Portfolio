@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <h2 class="section-title">{{ action }} Project</h2>
+
+  <form method="post" enctype="multipart/form-data">
+    <div class="form-row">
+      <label>Title</label>
+      <input type="text" name="title" value="{{ project.title if project else '' }}" required maxlength="150">
+    </div>
+
+    <div class="form-row">
+      <label>Short description</label>
+      <input type="text" name="short_description" value="{{ project.short_description if project else '' }}" maxlength="300">
+    </div>
+
+    <div class="form-row">
+      <label>Full description</label>
+      <textarea name="description" rows="6" maxlength="5000">{{ project.description if project else '' }}</textarea>
+    </div>
+
+    <div class="form-row">
+      <label>Tech stack (comma separated)</label>
+      <input type="text" name="tech_stack" value="{{ project.tech_stack if project else '' }}" maxlength="300">
+    </div>
+
+    <div class="form-row">
+      <label>Image</label>
+      <input type="file" name="image" accept="image/*">
+      {% if project and project.image_filename %}
+        <div style="margin-top:8px">
+          <img src="{{ project.image_url() }}" style="max-width:200px;border-radius:8px">
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="form-row">
+      <button class="btn" type="submit">{{ action }}</button>
+      <a href="{{ url_for('projects') }}" style="margin-left:12px" class="small">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}
