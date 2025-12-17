@@ -5,14 +5,14 @@ from flask import (
     request, send_from_directory
 )
 from werkzeug.utils import secure_filename
-from config import Config
+from flask_portfolio.config import Config
+from flask_portfolio.models import db, Project, Contact
 
 # ---------------- App Setup ----------------
 app = Flask(__name__)
 app.config.from_object(Config)
 
 # ---------------- Database ----------------
-from models import db, Project, Contact
 db.init_app(app)
 
 # ---------------- Utils ----------------

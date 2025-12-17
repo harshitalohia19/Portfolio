@@ -1,5 +1,5 @@
 from app import app
-from models import db, Contact
+from flask_portfolio.models import db
 
 with app.app_context():
     contact = Contact.query.first()
